@@ -9,7 +9,7 @@ function UserAccountpage() {
         <div>
           <Link
             className="text-blue-500 font-light hover:underline"
-            to="/user/1/user-req"
+            to={`/user/${username}/user-req`}
           >
             Click here
           </Link>{" "}

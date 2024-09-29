@@ -14,16 +14,14 @@ function Loginpage() {
 
     if (user) {
       if (user.password === password) {
-
         navigate(`/user/${username}`);
-
       } else {
         alert("Invalid password");
       }
     } else {
       alert("User not found. Please sign up.");
     }
-    
+
     setUsername("");
     setPassword("");
   };
@@ -37,19 +35,29 @@ function Loginpage() {
             <h1 className="text-[30px] font-extralight">Login</h1>
             <div>
               <label>Username</label>
-              <input type="text" className="border-2" value={username}
+              <input
+                type="text"
+                className="border-2"
+                value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                required />
+                required
+              />
             </div>
             <div>
               <label>Password</label>
-              <input type="password" className="border-2" value={password}
+              <input
+                type="password"
+                className="border-2"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                required />
+                required
+              />
             </div>
             <div>
-              <button type="submit"
-              className="cursor-pointer border-[#FF5722] border-2 p-2 bg-[#FF5722] font-bold">
+              <button
+                type="submit"
+                className="cursor-pointer border-[#FF5722] border-2 p-2 bg-[#FF5722] font-bold"
+              >
                 Login
               </button>
             </div>
