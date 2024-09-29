@@ -13,6 +13,7 @@ import Loginpage from "./pages/Loginpage";
 import Signuppage from "./pages/Signuppage";
 import UserAccountpage from "./pages/UserAccountpage";
 import UserRequirmentspage from "./pages/UserRequirmentspage";
+import UserOutputpage from "./pages/UserOutputpage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/signup" element={<Signuppage />} />
         <Route path="/user/1" element={<UserAccountpage />} />
         <Route path="/user/1/user-req" element={<UserRequirmentspage />} />
+        <Route path="/user/1/user-output" element={<UserOutputpage />} />
       </Routes>
       <Footer />
     </Router>

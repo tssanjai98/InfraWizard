@@ -6,6 +6,25 @@ function Homepage() {
   return (
     <>
       <div className="w-full bg-server-background h-[400px] bg-cover bg-center"></div>
+      <div className="w-[100%] px-10 py-20">
+        <p className="font-extralight text-[30px] mb-5">
+          Why Choose{" "}
+          <span className="font-extrabold">
+            <span className="text-[#FF5722]">Infra</span>Wizard
+          </span>
+          ?
+        </p>
+        <p className="font-extralight text-[20px]">
+          <span className="font-extrabold">
+            <span className="text-[#FF5722]">Infra</span>Wizard
+          </span>{" "}
+          is designed for cloud professionals looking to enhance their
+          deployment strategy with efficiency and accuracy. By automating the
+          design and cost analysis process, you can focus on what truly
+          matters—building robust, scalable solutions that drive business
+          success.
+        </p>
+      </div>
       <div className="w-[100%] flex flex-col lg:flex-row gap-5 px-5 py-10 justify-between items-center">
         <div className="w-[100%] rounded-sm p-10 border-2">
           <div className="card-image">
@@ -43,25 +62,6 @@ function Homepage() {
             </p>
           </div>
         </div>
-      </div>
-      <div className="w-[100%] bg-[#b5b5b5] px-10 py-20">
-        <p className="font-extralight text-[30px] mb-5">
-          Why Choose{" "}
-          <span className="font-extrabold">
-            <span className="text-[#FF5722]">Infra</span>Wizard
-          </span>
-          ?
-        </p>
-        <p className="font-extralight text-[20px]">
-          <span className="font-extrabold">
-            <span className="text-[#FF5722]">Infra</span>Wizard
-          </span>{" "}
-          is designed for cloud professionals looking to enhance their
-          deployment strategy with efficiency and accuracy. By automating the
-          design and cost analysis process, you can focus on what truly
-          matters—building robust, scalable solutions that drive business
-          success.
-        </p>
       </div>
     </>
   );
