@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { addUser, getUser } from "../userService";
+import { getUser } from "../userService";
 
 function Loginpage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -13,7 +14,9 @@ function Loginpage() {
 
     if (user) {
       if (user.password === password) {
-        alert("Login successful!");
+
+        navigate(`/user/${username}`);
+
       } else {
         alert("Invalid password");
       }

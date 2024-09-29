@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { addUser } from "../userService";
 
 function Signuppage() {
@@ -7,6 +7,7 @@ function Signuppage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,12 +24,13 @@ function Signuppage() {
 
     try {
       await addUser(user); 
-      alert("Signed Up");
+      navigate(`/user/${username}`);
     } catch (error) {
       console.error("Error adding user:", error);
       alert("Error signing up. Please try again.");
     }
   };
+
   return (
     <>
       <div className="w-[100%] h-[100vh] flex flex-row">
@@ -38,26 +40,39 @@ function Signuppage() {
             <h1 className="text-[30px] font-extralight">Sign Up</h1>
             <div>
               <label>Username:</label>
-              <input type="text" className="border-2"
-               value={username}
-               onChange={(e) => setUsername(e.target.value)}
-               required />
+              <input 
+                type="text" 
+                className="border-2"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required 
+              />
             </div>
             <div>
               <label>Password:</label>
-              <input type="password" className="border-2" 
-               value={password}
-               onChange={(e) => setPassword(e.target.value)}
-               required/>
+              <input 
+                type="password" 
+                className="border-2"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
             </div>
             <div>
               <label>Confirm Password:</label>
-              <input type="password" className="border-2"  value={confirmPassword}
-               onChange={(e) => setConfirmPassword(e.target.value)}
-               required/>
+              <input 
+                type="password" 
+                className="border-2"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+              />
             </div>
             <div>
-              <button type="submit" className="cursor-pointer border-[#FF5722] border-2 p-2 bg-[#FF5722] font-bold">
+              <button 
+                type="submit" 
+                className="cursor-pointer border-[#FF5722] border-2 p-2 bg-[#FF5722] font-bold"
+              >
                 Sign Up
               </button>
             </div>

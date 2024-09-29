@@ -24,9 +24,9 @@ function App() {
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/signup" element={<Signuppage />} />
-        <Route path="/user/1" element={<UserAccountpage />} />
-        <Route path="/user/1/user-req" element={<UserRequirmentspage />} />
-        <Route path="/user/1/user-output" element={<UserOutputpage />} />
+        <Route path="/user/:username" element={<UserAccountpage />} /> 
+        <Route path="/user/:username/user-req" element={<UserRequirmentspage />} />
+        <Route path="/user/:username/user-output" element={<UserOutputpage />} />
       </Routes>
       <Footer />
     </Router>
